@@ -1,0 +1,59 @@
+/* Styling for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container for the form */
+  .form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+  
+  /* Heading styling */
+  h2 {
+    color: #2fbde8;
+    margin-bottom: 20px;
+  }
+  
+  /* Input field and button styling */
+  input[type="text"], input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"] {
+    font-size: 16px;
+  }
+  
+  input[type="button"] {
+    background-color: #1c52d1;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #1c52d1;
+  }
+  
+  /* Result message styling */
+  p#result {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #ff0000;
+  }
+  
