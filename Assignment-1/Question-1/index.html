@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Registration Validation</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to CSS -->
+  <script src="script.js"></script> <!-- Link to JavaScript -->
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Course Registration</h2>
+    <form name="registrationForm" onsubmit="return validateForm()">
+      <label for="studentID">Student ID:</label><br>
+      <input type="text" id="studentID" name="studentID" placeholder="Enter your Student ID"><br><br>
+
+      <label for="course">Select Course:</label><br>
+      <select id="course" name="course">
+        <option value="">--Select Course--</option>
+        <option value="course1">Course 1</option>
+        <option value="course2">Course 2</option>
+      </select><br><br>
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+
+</body>
+</html>
