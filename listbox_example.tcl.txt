@@ -1,0 +1,38 @@
+# Initialize the main window
+package require Tk
+wm title . "List Box Example"
+
+# Create the two list boxes
+listbox .list1 -selectmode single -width 20 -height 10
+listbox .list2 -selectmode single -width 20 -height 10
+
+# Populate the first list box with sample items
+foreach item {Item1 Item2 Item3 Item4 Item5 Item6 Item7 Item8 Item9 Item10} {
+    .list1 insert end $item
+}
+
+# Define a procedure to handle copying items from list1 to list2
+proc copy_item {} {
+    set selection [.list1 curselection]
+    if {$selection ne ""} {
+        set item [.list1 get $selection]
+        .list2 insert end $item
+    }
+}
+
+# Define a procedure to handle removing items from list2
+proc remove_item {} {
+    set selection [.list2 curselection]
+    if {$selection ne ""} {
+        .list2 delete $selection
+    }
+}
+
+# Bind the selection of list1 to the copy_item procedure
+bind .list1 <<ListboxSelect>> {copy_item}
+
+# Bind the selection of list2 to the remove_item procedure
+bind .list2 <<ListboxSelect>> {remove_item}
+
+# Layout the list boxes side by side
+pack .list1 .list2 -side left -padx 10 -pady 10

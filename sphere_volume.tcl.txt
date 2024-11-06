@@ -1,0 +1,19 @@
+# Function to calculate the volume of a sphere
+proc sphereVolume {radius} {
+    # Calculate volume using the formula
+    set volume [expr {(4.0 / 3.0) * 3.14159 * pow($radius, 3)}]
+    return $volume
+}
+
+# Prompt the user to enter the radius
+puts "Enter the radius of the sphere:"
+gets stdin radius
+
+# Check if the input is a positive number
+if { $radius > 0 } {
+    # Calculate and display the volume
+    set volume [sphereVolume $radius]
+    puts "The volume of the sphere with radius $radius is: $volume"
+} else {
+    puts "Please enter a positive number for the radius."
+}
